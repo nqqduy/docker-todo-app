@@ -4,7 +4,7 @@ services:
   mongodb:
     image: mongo
     volumes:
-      - mongodbdata:/data/db
+      - ./data/mongodbdata:/data/db
     env_file:
       - ./env/mongo.env
     container_name: mongodb # xác định tên container
@@ -25,5 +25,3 @@ services:
     ports:
       - 8081:3000
     container_name: frontend
-volumes:
-  mongodbdata:
