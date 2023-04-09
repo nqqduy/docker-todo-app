@@ -7,11 +7,11 @@ services:
       - ./data/mongodbdata:/data/db
     env_file:
       - ./env/mongo.env
-    container_name: mongodb # xác định tên container
+    container_name: mongodb
   backend:
     image: duynguyenquoc/backend-todo-app:latest
     ports:
-      - 8002:8000
+      - 8082:8000
     env_file:
       - ./env/backend.env
     depends_on:
